@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>N17 — The Signal</title>
+<meta name="description" content="N17 — a fictional browser puzzle hunt inspired by internet mystery culture.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="noise"></div>
+<div id="boot">
+  <div class="glyph">N17</div>
+  <div class="bootline" id="bootline">initializing signal...</div>
+  <div class="bootbar"><i></i></div>
+</div>
+
+<main id="app" class="hidden">
+<header class="topbar">
+  <div class="brand">
+    <div class="mark">N17</div>
+    <div>
+      <strong>N17 — THE SIGNAL</strong>
+      <small>puzzle hunt // browser terminal // fictional</small>
+    </div>
+  </div>
+  <div class="top-actions">
+    <button id="langBtn" class="ghost">FA</button>
+    <button id="soundBtn" class="ghost">SOUND: OFF</button>
+    <button id="resetBtn" class="ghost danger">RESET</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow">TRANSMISSION 01</span>
+    <h1 id="heroTitle">Someone left a signal.</h1>
+    <p id="heroText">It was not addressed to you. It was waiting for someone curious enough to listen.</p>
+    <div class="hero-actions">
+      <button id="enterBtn" class="primary">ENTER THE SIGNAL</button>
+      <button id="rulesBtn" class="ghost">RULES</button>
+    </div>
+  </div>
+  <div class="orbital">
+    <div class="orbit o1"></div><div class="orbit o2"></div><div class="orbit o3"></div>
+    <div class="core">17</div>
+    <span class="pin p1">N</span><span class="pin p2">1</span><span class="pin p3">7</span>
+  </div>
+</section>
+
+<section class="dashboard">
+  <aside class="panel sidebar">
+    <div class="panel-title"><span id="stagesTitle">SEQUENCES</span><span id="stageCount">0/7</span></div>
+    <div id="stageList"></div>
+    <div class="panel-note" id="sideNote">Every solved sequence unlocks the next layer.</div>
+  </aside>
+
+  <section class="panel workspace">
+    <div class="workspace-head">
+      <div>
+        <div class="eyebrow" id="sequenceEyebrow">SEQUENCE 01</div>
+        <h2 id="sequenceTitle">The First Pulse</h2>
+        <p id="sequenceDesc">Decode the obvious thing. Then question why it was obvious.</p>
+      </div>
+      <div class="score-pill"><span id="scoreLabel">SCORE</span><b id="score">0</b></div>
+    </div>
+
+    <div id="challenge"></div>
+
+    <div class="work-grid">
+      <div class="terminal panel-inset">
+        <div class="term-top"><span>n17@signal:~$</span><button id="clearTerminal" class="micro">clear</button></div>
+        <div id="terminalOutput" class="term-output"></div>
+        <div class="term-input-row">
+          <span>›</span><input id="termInput" autocomplete="off" spellcheck="false" placeholder="type a command...">
+        </div>
+      </div>
+      <div class="hint-panel panel-inset">
+        <div class="hint-head"><span id="hintTitle">INTELLIGENCE</span><span class="badge">LOCAL</span></div>
+        <p id="hintText">You can ask for hints, inspect the lab, or use the terminal. The final answer is never sent anywhere.</p>
+        <div class="hint-buttons">
+          <button class="ghost" id="hint1">HINT 1</button>
+          <button class="ghost" id="hint2">HINT 2</button>
+          <button class="ghost" id="reveal">REVEAL</button>
+        </div>
+        <div id="flagBox" class="flag"></div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<div id="modal" class="modal hidden">
+  <div class="modal-card">
+    <button class="close" id="closeModal">×</button>
+    <div class="eyebrow">FIELD MANUAL</div>
+    <h2 id="modalTitle">Rules</h2>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<footer>© N17 // fictional puzzle hunt // no external requests // play locally</footer>
+</main>
+
+<script src="game.js"></script>
+</body>
+</html>
